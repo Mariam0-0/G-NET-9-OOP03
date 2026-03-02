@@ -142,35 +142,35 @@ namespace G_NET_9_OOP03
 
             #region Main
 
-            Cinema cinema = new Cinema();
-            Ticket ticket1 = new StandardTicket("Inception", 120, "A-5");
-            Ticket ticket2 = new VIPTicket("Avengers", 200, true);
-            Ticket ticket3 = new IMAXTicket("Dune", 180, false);
-            cinema.AddTicket(ticket1);
-            cinema.AddTicket(ticket2);
-            cinema.AddTicket(ticket3);
+            //Cinema cinema = new Cinema();
+            //Ticket ticket1 = new StandardTicket("Inception", 120, "A-5");
+            //Ticket ticket2 = new VIPTicket("Avengers", 200, true);
+            //Ticket ticket3 = new IMAXTicket("Dune", 180, false);
+            //cinema.AddTicket(ticket1);
+            //cinema.AddTicket(ticket2);
+            //cinema.AddTicket(ticket3);
 
-            cinema.OpenCinema();
-            cinema.StartProjector();
-            Console.WriteLine();
+            //cinema.OpenCinema();
+            //cinema.StartProjector();
+            //Console.WriteLine();
 
-            cinema.PrintAllTickets();
-            Console.WriteLine();
+            //cinema.PrintAllTickets();
+            //Console.WriteLine();
 
-            Console.WriteLine("========= Statistics =========");
-            Console.WriteLine($"Total tickets sold: {Ticket.GetTotalTicketsSold()}");
-            Console.WriteLine();
-            for (int i = 0; i < 2; i++)
-            {
-                Console.WriteLine($"Booking Reference {i + 1}: {BookingHelper.GenerateBookingReference()}");
-            }
+            //Console.WriteLine("========= Statistics =========");
+            //Console.WriteLine($"Total tickets sold: {Ticket.GetTotalTicketsSold()}");
+            //Console.WriteLine();
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    Console.WriteLine($"Booking Reference {i + 1}: {BookingHelper.GenerateBookingReference()}");
+            //}
 
-            Console.WriteLine();
-            Console.WriteLine($"Group Discount (5 tickets x 100 EGP): {BookingHelper.CalcGroupDiscount(5, 100)} EGP (10% off applied)");
+            //Console.WriteLine();
+            //Console.WriteLine($"Group Discount (5 tickets x 100 EGP): {BookingHelper.CalcGroupDiscount(5, 100)} EGP (10% off applied)");
 
-            Console.WriteLine();
-            cinema.CloseCinema();
-            cinema.StopProjector();
+            //Console.WriteLine();
+            //cinema.CloseCinema();
+            //cinema.StopProjector();
             #endregion
 
             #endregion
