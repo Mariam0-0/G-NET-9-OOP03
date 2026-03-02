@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Net.Sockets;
 using System.Reflection.Metadata;
 using System.Security.Principal;
@@ -101,6 +102,9 @@ namespace G_NET_9_OOP03
 
             #region Part 02: Practical
 
+            #region Requirements
+
+
             // ===============================================================================
             //Part 02 : Practical(Extending the Movie Ticket Booking System)
             //In Assignments 01 & 02, you built a Movie Ticket Booking System with a Ticket class, properties, indexers, and static members.Now you will refactor and extend it using inheritance, composition, and sealed classes.
@@ -112,6 +116,7 @@ namespace G_NET_9_OOP03
             //c.A computed property PriceAfterTax that returns the price with 14% tax.
             //d.Override ToString() to return the ticket info.
             //e.A static int GetTotalTickets() method that returns the total number of tickets created.
+
 
             //2. Create three child classes that inherit from Ticket:
             //a.StandardTicket — adds SeatNumber(string).
@@ -131,6 +136,42 @@ namespace G_NET_9_OOP03
             //c.Print all tickets.
             //d.Close the Cinema.
             // ===============================================================================
+            #endregion
+
+
+
+            #region Main
+
+            Cinema cinema = new Cinema();
+            Ticket ticket1 = new StandardTicket("Inception", 120, "A-5");
+            Ticket ticket2 = new VIPTicket("Avengers", 200, true);
+            Ticket ticket3 = new IMAXTicket("Dune", 180, false);
+            cinema.AddTicket(ticket1);
+            cinema.AddTicket(ticket2);
+            cinema.AddTicket(ticket3);
+
+            cinema.OpenCinema();
+            cinema.StartProjector();
+            Console.WriteLine();
+
+            cinema.PrintAllTickets();
+            Console.WriteLine();
+
+            Console.WriteLine("========= Statistics =========");
+            Console.WriteLine($"Total tickets sold: {Ticket.GetTotalTicketsSold()}");
+            Console.WriteLine();
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine($"Booking Reference {i + 1}: {BookingHelper.GenerateBookingReference()}");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine($"Group Discount (5 tickets x 100 EGP): {BookingHelper.CalcGroupDiscount(5, 100)} EGP (10% off applied)");
+
+            Console.WriteLine();
+            cinema.CloseCinema();
+            cinema.StopProjector();
+            #endregion
 
             #endregion
 
