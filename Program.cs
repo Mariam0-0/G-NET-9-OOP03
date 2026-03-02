@@ -63,6 +63,38 @@ namespace G_NET_9_OOP03
             //d) Can you create an object from a sealed class using new? Why or why not?
             // ===============================================================================
 
+
+            // a)
+
+            // If a field is protected => it is accessible for any child class in that assembly or in a different one
+            // For an object instance from outside it won't be accessible, without inheritance protected is treated as private
+
+            // ===============================================================================
+            // b)
+
+            // WITHOUT INHERITANCE:
+            // protected internal => member is accessible in the same assembly since it's "internal"
+            // private protected  => member is accessible in the same class since it's "private"
+
+            // WITH INHERITANCE:
+            // protected internal => accessible in the same assembly (like internal), or in child classes anywhere (like protected)
+            // private protected  => accessible in its own class (like private), or in child classes anywhere (like protected)
+
+
+            // ===============================================================================
+            // c) What does the sealed keyword do when applied to a class? What about when applied to a method?
+
+            // when it's applied to a class => means that this class cannot be inherited (the class is the final class in its hierarchy)
+            // when it's applied to a method => means that this method cannot be overridden by child classes (final form of this method)
+
+
+
+            // ===============================================================================
+            // d) Can you create an object from a sealed class using new? Why or why not?
+
+            // yes because class sealing prevents inheritance not instantiation 
+
+
             #endregion
 
             #endregion
