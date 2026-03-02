@@ -26,6 +26,30 @@ namespace G_NET_9_OOP03
             //e) A method receives a Logger as a parameter and calls it inside the method only.
             // ===============================================================================
 
+            //a) A University has Departments. If the university is closed, the departments no longer exist.
+
+            // Composition relationship since this is a HAS-A strong relationship
+
+            // ===============================================================================
+            //b) A Driver uses a Car.The driver does not own the car.
+
+            // Association relationship 
+
+            // ===============================================================================
+            //c) A Dog is an Animal.
+
+            // Inheritance relationship, since this is a IS-A relationship
+
+            // ===============================================================================
+            //d) A Team has Players. If the team is deleted, the players still exist.
+
+            // Aggregation relationship, since this is a weak HAS-A relationship
+
+            // ===============================================================================
+            //e) A method receives a Logger as a parameter and calls it inside the method only.
+
+            // Dependency relationship, since the class object is used as a parameter in a function
+
             #endregion
 
             #region Question 02
